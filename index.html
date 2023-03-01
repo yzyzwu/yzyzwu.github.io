@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight API Test</title>
+    <link rel="stylesheet" href="./test.css">
+    <script src="./test.js" defer></script>
+
+</head>
+
+<body>
+    <div>
+        This page is used to test the performance of Highlight API
+    </div>
+    <br>
+    <button type="button" onclick="measureTime(highlightWithAPIRanges)">Highlight with API using Ranges</button>
+    <button type="button" onclick="measureTime(highlightWithAPIStaticRanges)">Highlight with API using
+        StaticRanges</button>
+    <button type="button" onclick="measureTime(restoreWithAPI)">Clear API highlights</button>
+    <br><br>
+    <button type="button" onclick="measureTime(highlightWithSpans)">Highlight with spans</button>
+    <button type="button" onclick="measureTime(restoreWithSpans)">Clear highlighted spans</button>
+    <br><br>
+    <div>You can change the number of text nodes: </div>
+    <input type="number" id="span-quantity" value="10000"><button type="button" id="generate-content-button"
+        onclick="generateContent()">Generate</button>
+    <br><br>
+    <div>Time used <span id="performance-span">0</span>ms</div>
+    <br>
+    <span id="parent-span"></span>
+</body>
+
+</html>
